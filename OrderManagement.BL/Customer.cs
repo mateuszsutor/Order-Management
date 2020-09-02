@@ -14,15 +14,27 @@ namespace OrderManagement.BL
 
         public string LastName { get; set; }
 
-
         public string EmailAddress { get; set; }
 
         public string HomeAddress { get; set; }
 
         public string WorkAddress { get; set; }
+
         public string FirstNameAndLastName
         {
-            get { return LastName + " " + FirstName; }
+            get
+            {
+                if (FirstName is null)
+                {
+                    return LastName;
+                }
+                if (LastName is null)
+                {
+                    return FirstName;
+                }
+
+                return FirstName + " " + LastName;
+            }
         }
-   }
+    }
 }
