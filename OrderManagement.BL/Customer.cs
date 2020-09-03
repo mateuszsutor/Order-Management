@@ -8,6 +8,8 @@ namespace OrderManagement.BL
 {
     public class Customer
     {
+        public static int Count { get; set; }
+
         public int IdCustomer { get; private set; }
 
         public string FirstName { get; set; }

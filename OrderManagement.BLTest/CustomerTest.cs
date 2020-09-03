@@ -56,6 +56,29 @@ namespace OrderManagement.BLTest
             Assert.AreEqual(expectedValue, actualValue);
         }
 
+        [TestMethod]
+        public void staticTest()
+        {
+            //Arrange
+            Customer customer1 = new Customer();
+            customer1.FirstName = "Jan";
+            Customer.Count += 1;
+
+            Customer customer2 = new Customer();
+            customer2.FirstName = "Tomek";
+            Customer.Count += 1;
+
+            Customer customer3 = new Customer();
+            customer3.FirstName = "Jacek";
+            Customer.Count += 1;
+
+
+            Assert.AreEqual(3, Customer.Count);
+
+        }
+
+
+
         //[TestMethod]
         //public void FirstNameAndLastNameTestNameAndSurnameIsNull()
         //{
