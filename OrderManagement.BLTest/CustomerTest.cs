@@ -74,8 +74,37 @@ namespace OrderManagement.BLTest
 
 
             Assert.AreEqual(3, Customer.Count);
+        }
+
+        [TestMethod]
+        public void ValidateMethodTestCorrectValue()
+        {
+            Customer customer = new Customer();
+            customer.LastName = "Nowak";
+            customer.EmailAddress = "Jan@o2.pl";
+
+            var expected = true;
+            var actual = customer.Validate();
+
+            Assert.AreEqual(expected, actual);
 
         }
+
+        [TestMethod]
+        public void ValidateMethodTestNoCorrectValueMissingEmail()
+        {
+            Customer customer = new Customer();
+            customer.LastName = "Nowak";
+            customer.FirstName = "Marek";
+
+            var expected = false;
+            var actual = customer.Validate();
+
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
 
 
 

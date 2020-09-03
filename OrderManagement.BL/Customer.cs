@@ -40,5 +40,48 @@ namespace OrderManagement.BL
                 return fistNameAndLastName;
             }
         }
+
+        public bool Validate()
+        {
+            var correct = true;
+
+            if (string.IsNullOrWhiteSpace(LastName))
+                correct = false;
+
+            if (string.IsNullOrWhiteSpace(EmailAddress))
+                correct = false;
+
+            return correct;
+        }
+
+
+        /// <summary>
+        /// Save actual client
+        /// </summary>
+        /// <returns></returns>
+        public bool SaveCustomer()
+        {
+            // kod który zapisuje zdefiniowanego klienta
+
+            return true;
+        }
+
+        public Customer GetCustomer(int idCustomer) 
+        {
+            // kod który pobiera okreslonego klienta
+            return new Customer();
+        }
+
+        public List<Customer> GetAllCustomer()
+        {
+            // kod który pobiera wszytkich klientów
+            return new List<Customer>();
+        }
+
+
+
+
+
+
     }
 }
