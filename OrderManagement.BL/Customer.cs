@@ -24,16 +24,18 @@ namespace OrderManagement.BL
         {
             get
             {
-                if (FirstName is null)
+                string fistNameAndLastName = FirstName;
+
+                if (!string.IsNullOrWhiteSpace(LastName))
                 {
-                    return LastName;
-                }
-                if (LastName is null)
-                {
-                    return FirstName;
+                    if (!string.IsNullOrWhiteSpace(fistNameAndLastName))
+                    {
+                        fistNameAndLastName += " ";
+                    }
+                    fistNameAndLastName += LastName;
                 }
 
-                return FirstName + " " + LastName;
+                return fistNameAndLastName;
             }
         }
     }
