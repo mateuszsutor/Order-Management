@@ -8,9 +8,17 @@ namespace OrderManagement.BL
 {
     public class Customer
     {
+        public Customer() { }
+
+        public Customer(int customerId)
+        {
+            this.CustomerId = customerId;
+        }
+
+
         public static int Count { get; set; }
 
-        public int IdCustomer { get; private set; }
+        public int CustomerId { get; private set; }
 
         public string FirstName { get; set; }
 
@@ -41,6 +49,11 @@ namespace OrderManagement.BL
             }
         }
 
+
+        /// <summary>
+        /// Validates the required properties
+        /// </summary>
+        /// <returns>return true if the properties is valid and false if not valid </returns>
         public bool Validate()
         {
             var correct = true;
@@ -66,22 +79,26 @@ namespace OrderManagement.BL
             return true;
         }
 
-        public Customer GetCustomer(int idCustomer) 
+        /// <summary>
+        /// Get one customer
+        /// </summary>
+        /// <param name="idCustomer">Customer id</param>
+        /// <returns></returns>
+        public Customer GetCustomer(int idCustomer)
         {
             // kod który pobiera okreslonego klienta
             return new Customer();
         }
 
+        /// <summary>
+        /// Get all customer
+        /// </summary>
+        /// <returns>List all customer</returns>
         public List<Customer> GetAllCustomer()
         {
             // kod który pobiera wszytkich klientów
             return new List<Customer>();
         }
-
-
-
-
-
 
     }
 }

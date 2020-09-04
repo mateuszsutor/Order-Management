@@ -104,6 +104,19 @@ namespace OrderManagement.BLTest
 
         }
 
+        [TestMethod]
+        public void testConstructor()
+        {
+            Customer customer1 = new Customer(1);
+            customer1.LastName = "Nowak";
+            customer1.FirstName = "Marek";
+
+            Customer customer2 = new Customer(2);
+            Customer customer3 = new Customer(3);
+
+            
+        }
+
 
 
 
