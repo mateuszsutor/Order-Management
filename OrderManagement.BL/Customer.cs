@@ -53,7 +53,7 @@ namespace OrderManagement.BL
         /// <summary>
         /// Validates the required properties
         /// </summary>
-        /// <returns>return true if the properties is valid and false if not valid </returns>
+        /// <returns>returns true if the properties is valid and false if not valid </returns>
         public bool Validate()
         {
             var correct = true;

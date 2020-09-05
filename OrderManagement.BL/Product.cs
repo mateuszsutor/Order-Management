@@ -49,7 +49,7 @@ namespace OrderManagement.BL
         /// <summary>
         /// Validates the required field ProductName
         /// </summary>
-        /// <returns>return true if the product name is correct and false if is null </returns>
+        /// <returns>returns true if the product name is correct and false if is null </returns>
         public bool Validate()
         {
             var correct = true;
