@@ -66,39 +66,5 @@ namespace OrderManagement.BL
 
             return correct;
         }
-
-
-        /// <summary>
-        /// Save actual client
-        /// </summary>
-        /// <returns></returns>
-        public bool SaveCustomer()
-        {
-            // kod który zapisuje zdefiniowanego klienta
-
-            return true;
-        }
-
-        /// <summary>
-        /// Get one customer
-        /// </summary>
-        /// <param name="idCustomer">Customer id</param>
-        /// <returns></returns>
-        public Customer GetCustomer(int idCustomer)
-        {
-            // kod który pobiera okreslonego klienta
-            return new Customer();
-        }
-
-        /// <summary>
-        /// Get all customer
-        /// </summary>
-        /// <returns>List all customer</returns>
-        public List<Customer> GetAllCustomer()
-        {
-            // kod który pobiera wszytkich klientów
-            return new List<Customer>();
-        }
-
     }
 }
