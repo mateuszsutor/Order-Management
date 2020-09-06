@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OrderManagement.BL
 {
@@ -17,6 +18,12 @@ namespace OrderManagement.BL
         public int OrderId { get; private set; }
 
         public DateTimeOffset? OrderDate { get; set; }
+
+        public List<OrderItem> OrdersItems { get; set; }
+
+        public int CustomerId { get; set; }
+
+        public int DesntinationAddressId  { get; set; }
 
         /// <summary>
         /// Checks correct data of the order 
