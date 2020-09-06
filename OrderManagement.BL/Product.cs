@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderManagement.BL
 {
-    public class Product
+    public class Product : BaseClass
     {
         public Product()
         {
@@ -29,7 +25,7 @@ namespace OrderManagement.BL
         /// Validates the required field ProductName
         /// </summary>
         /// <returns>returns true if the product name is correct and false if is null </returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var correct = true;
 
@@ -38,6 +34,12 @@ namespace OrderManagement.BL
                        
             return correct;
         }
+
+        public override string ToString()
+        {
+            return ProductName;
+        }
+
 
     }
 }

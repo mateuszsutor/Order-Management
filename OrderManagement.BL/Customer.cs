@@ -2,7 +2,7 @@
 
 namespace OrderManagement.BL
 {
-    public class Customer
+    public class Customer : BaseClass
     {
         public Customer() 
         {
@@ -56,7 +56,7 @@ namespace OrderManagement.BL
         /// Validates the required properties
         /// </summary>
         /// <returns>returns true if the properties is valid and false if not valid </returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var correct = true;
 
@@ -67,6 +67,11 @@ namespace OrderManagement.BL
                 correct = false;
 
             return correct;
+        }
+
+        public override string ToString()
+        {
+            return FirstNameAndLastName;
         }
     }
 }

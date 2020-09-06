@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace OrderManagement.BL
 {
-    public class Order
+    public class Order : BaseClass
     {
         public Order()
         {
@@ -29,7 +29,7 @@ namespace OrderManagement.BL
         /// Checks correct data of the order 
         /// </summary>
         /// <returns>returns true if the order day is it not null and false if is null </returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var correct = true;
 
@@ -37,6 +37,11 @@ namespace OrderManagement.BL
                 correct = false;
 
             return correct;
+        }
+
+        public override string ToString()
+        {
+            return OrderDate.Value.DateTime + "( id: " + OrderId + ")";
         }
 
     }

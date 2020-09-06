@@ -1,4 +1,6 @@
-﻿namespace OrderManagement.BL
+﻿using System;
+
+namespace OrderManagement.BL
 {
     public class ProductRepository
     {
@@ -12,6 +14,11 @@
         {
             // tymczasiwy kod, który ma pobierać zdefiniowany produkt
             var product = new Product(productId);
+
+            Object myObject = new Object();
+            Console.WriteLine("Obiekt :" + myObject.ToString()); 
+            Console.WriteLine("Product :" + product.ToString()); 
+
             if (productId == 2)
             {
                 product.ProductName = "Klocki";
@@ -27,10 +34,24 @@
         /// Save product
         /// </summary>
         /// <returns></returns>
-        public bool SaveProduct()
+        public bool SaveProduct(Product product)
         {
             // Kod, który zapisuje produkt do kolekcji
-            return true;
+            var success = true;
+
+            if (product.HasChanges && product.DataIsCorrect)
+            {
+                if (product.IsItsNew)
+                {
+                    // wywołanie prodedury składowej insert (zapis do bazy)
+                }
+                else
+                {
+                    // wywołanie prodedury składowej update (update do bazy) 
+                }
+            }
+
+            return success;
         }
     }
 }

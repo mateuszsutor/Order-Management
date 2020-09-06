@@ -17,11 +17,24 @@ namespace OrderManagement.BL
         /// Save actual client
         /// </summary>
         /// <returns></returns>
-        public bool SaveCustomer()
+        public bool SaveCustomer(Customer customer)
         {
-            // kod który zapisuje zdefiniowanego klienta
+            // Kod, który zapisuje produkt do kolekcji
+            var success = true;
 
-            return true;
+            if (customer.HasChanges && customer.DataIsCorrect)
+            {
+                if (customer.IsItsNew)
+                {
+                    // wywołanie prodedury składowej insert (zapis do bazy)
+                }
+                else
+                {
+                    // wywołanie prodedury składowej update (update do bazy) 
+                }
+            }
+
+            return success;
         }
 
         /// <summary>

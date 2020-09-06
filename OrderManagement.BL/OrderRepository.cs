@@ -19,7 +19,7 @@ namespace OrderManagement.BL
             var order = new Order(orderId);
 
             if (orderId == 10)
-                order.OrderDate = new DateTimeOffset(2020, 9, 6, 12, 00, 00, new TimeSpan(7, 0, 0));
+                order.OrderDate = new DateTimeOffset(2020, 9, 6, 20, 00, 00, new TimeSpan(7, 0, 0));
 
             return order;
 
@@ -83,10 +83,24 @@ namespace OrderManagement.BL
         /// Save order
         /// </summary>
         /// <returns></returns>
-        public bool SaveOrder()
+        public bool SaveOrder(Order order)
         {
-            // Kod, który zapisuje zamówienie do kolekcji
-            return true;
+            // Kod, który zapisuje produkt do kolekcji
+            var success = true;
+
+            if (order.HasChanges && order.DataIsCorrect)
+            {
+                if (order.IsItsNew)
+                {
+                    // wywołanie prodedury składowej insert (zapis do bazy)
+                }
+                else
+                {
+                    // wywołanie prodedury składowej update (update do bazy) 
+                }
+            }
+
+            return success;
         }
     }
 }
