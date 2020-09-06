@@ -1,14 +1,20 @@
-﻿namespace OrderManagement.BL
+﻿using System.Collections.Generic;
+
+namespace OrderManagement.BL
 {
     public class Customer
     {
-        public Customer() { }
+        public Customer() 
+        {
+            AddressesList = new List<Address>();
+        }
 
-        public Customer(int customerId)
+        public Customer(int customerId) : this()
         {
             this.CustomerId = customerId;
         }
 
+        public List<Address> AddressesList { get; set; }
 
         public static int Count { get; set; }
 

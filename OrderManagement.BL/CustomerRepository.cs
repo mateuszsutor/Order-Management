@@ -1,10 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace OrderManagement.BL
 {
     public class CustomerRepository
     {
-           /// <summary>
+
+        private AddressRepository addressRepository { get; set; }
+
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
+
+        /// <summary>
         /// Save actual client
         /// </summary>
         /// <returns></returns>
@@ -24,7 +33,7 @@ namespace OrderManagement.BL
         {
             // tworzymy instancje klasy
             Customer customer = new Customer(customerId);
-
+            customer.AddressesList = addressRepository.GetAddressUsingCustomerId(customerId).ToList();
 
             // kod, który pobiera określonego klienta
 
