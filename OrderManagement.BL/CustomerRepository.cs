@@ -34,7 +34,7 @@ namespace OrderManagement.BL
 
 
             // tymczasowo zakodowane wartości, aby zwrócić klienta
-            
+
             if (customerId == 1)
             {
                 customer.EmailAddress = "jan.kowalski@test.pl";
@@ -42,8 +42,7 @@ namespace OrderManagement.BL
                 customer.LastName = "Kowalski";
             }
 
-
-            return new Customer();
+            return customer;
         }
 
         /// <summary>

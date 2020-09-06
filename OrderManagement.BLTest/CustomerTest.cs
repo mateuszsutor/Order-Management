@@ -116,24 +116,6 @@ namespace OrderManagement.BLTest
 
             
         }
-
-
-
-
-
-        //[TestMethod]
-        //public void FirstNameAndLastNameTestNameAndSurnameIsNull()
-        //{
-        //    //Arrange
-        //    Customer customer = new Customer();
-
-        //    //Act
-        //    string actualValue = customer.FirstNameAndLastName;
-
-        //    //Assert
-        //    Assert.ThrowsException<ArgumentNullException>(()=> actualValue);
-        //}
-
     }
 }
 
