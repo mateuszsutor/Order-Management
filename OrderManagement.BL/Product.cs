@@ -24,27 +24,6 @@ namespace OrderManagement.BL
         public string Description { get; set; }
         public string ProductName { get; set; }
 
-        /// <summary>
-        /// Get one product
-        /// </summary>
-        /// <param name="productId"></param>
-        /// <returns></returns>
-        public Product GetProduct(int productId)
-        {
-            // Kod, który ma pobierać zdefioniowany product
-            return new Product();
-        }
-
-
-        /// <summary>
-        /// Save product
-        /// </summary>
-        /// <returns></returns>
-        public bool SaveProduct()
-        {
-            // Kod, który zapisuje produkt do kolekcji
-            return true;
-        }
 
         /// <summary>
         /// Validates the required field ProductName

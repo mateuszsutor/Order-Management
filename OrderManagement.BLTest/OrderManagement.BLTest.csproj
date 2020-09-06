@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CustomerRepositoryTest.cs" />
     <Compile Include="CustomerTest.cs" />
+    <Compile Include="OrderRepositoryTest.cs" />
     <Compile Include="ProductRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

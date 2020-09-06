@@ -10,8 +10,8 @@ namespace OrderManagement.BLTest
         public void GetProductTest()
         {
             // Arrange
-            var productRepo = new Product();
-            var expectedProduct = new Product()
+            var productRepo = new ProductRepository();
+            var expectedProduct = new Product(2)
             {
                 ProductName = "Klocki",
                 Description = "Klocki dla dzieci 3+",
@@ -23,12 +23,9 @@ namespace OrderManagement.BLTest
             var actualProduct = productRepo.GetProduct(2);
 
             // Assert
-            Assert.AreEqual(productRepo.ProductName, actualProduct.ProductName);
-            Assert.AreEqual(productRepo.Description, actualProduct.Description);
-            Assert.AreEqual(productRepo.ActualPrice, actualProduct.ActualPrice);
-            
-
+            Assert.AreEqual(expectedProduct.ProductName, actualProduct.ProductName);
+            Assert.AreEqual(expectedProduct.Description, actualProduct.Description);
+            Assert.AreEqual(expectedProduct.ActualPrice, actualProduct.ActualPrice);
         }
-
     }
 }
