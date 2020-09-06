@@ -14,6 +14,7 @@ namespace OrderManagement.BL
             this.CustomerId = customerId;
         }
 
+
         public List<Address> AddressesList { get; set; }
 
         public static int Count { get; set; }
@@ -49,6 +50,7 @@ namespace OrderManagement.BL
             }
         }
 
+        public int CustomerType { get; set; }
 
         /// <summary>
         /// Validates the required properties
