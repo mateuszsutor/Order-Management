@@ -6,7 +6,7 @@ namespace Common
 {
     public static class StringHandling
     {
-        public static string InsertSpace(string source)
+        public static string InsertSpace(this string source)
         {
             string result = string.Empty;
                        
@@ -42,7 +42,7 @@ namespace Common
                 }
             }
             result = result.Trim();
-                       
+
             return result;
 
         }

@@ -13,7 +13,7 @@ namespace CommonTest
             var source = "KlockiLego";
             var expected = "Klocki Lego";
 
-            var actual = StringHandling.InsertSpace(source);
+            var actual = source.InsertSpace();
 
             Assert.AreEqual(expected, actual);
         }
@@ -25,7 +25,7 @@ namespace CommonTest
             var source = "Klocki Lego";
             var expected = "Klocki Lego";
 
-            var actual = StringHandling.InsertSpace(source);
+            var actual = source.InsertSpace();
 
             Assert.AreEqual(expected, actual);
         }
@@ -35,8 +35,7 @@ namespace CommonTest
         public void InsertSpaceTestWithSourceIsEmptyString()
         {
             var source = "";
-            var actual = StringHandling.InsertSpace(source);
-
+            StringHandling.InsertSpace(source);
         }
 
         [TestMethod]

@@ -26,7 +26,7 @@ namespace OrderManagement.BL
         {
             get 
             {
-                return StringHandling.InsertSpace(_ProductName); 
+                return _ProductName.InsertSpace(); 
             }
 
             set { _ProductName = value; }
