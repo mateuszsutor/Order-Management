@@ -18,7 +18,14 @@ namespace OrderManagement.BL
 
         public Decimal? ActualPrice { get; set; }
         public string Description { get; set; }
-        public string ProductName { get; set; }
+        private string _ProductName;
+
+        public string ProductName
+        {
+            get { return _ProductName; }
+            set { _ProductName = value; }
+        }
+
 
 
         /// <summary>
@@ -31,7 +38,7 @@ namespace OrderManagement.BL
 
             if (string.IsNullOrWhiteSpace(ProductName))
                 correct = false;
-                       
+
             return correct;
         }
 
@@ -39,7 +46,6 @@ namespace OrderManagement.BL
         {
             return ProductName;
         }
-
 
     }
 }
