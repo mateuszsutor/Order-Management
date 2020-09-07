@@ -36,6 +36,17 @@ namespace CommonTest
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
+        public void InsertSpaceTestWithSourceIsEmptyString()
+        {
+            var source = "";
+            var stringHandling = new StringHandling();
+
+            var actual = stringHandling.InertSpace(source);
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void InsertSpaceTestWithNullValue()
         {
                       

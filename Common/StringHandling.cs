@@ -22,12 +22,12 @@ namespace Common
             //}        
             
 
-            if (source == null)
+            if (source == null || source == "")
             {
                 throw new ArgumentNullException("Wartośc nie może być nullem");
             }
 
-
+          
             if (!string.IsNullOrWhiteSpace(source))
             {
 
