@@ -15,10 +15,6 @@ namespace OrderManagement.BL
             // tymczasiwy kod, który ma pobierać zdefiniowany produkt
             var product = new Product(productId);
 
-            Object myObject = new Object();
-            Console.WriteLine("Obiekt :" + myObject.ToString()); 
-            Console.WriteLine("Product :" + product.ToString()); 
-
             if (productId == 2)
             {
                 product.ProductName = "Klocki";

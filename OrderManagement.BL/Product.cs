@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 
 namespace OrderManagement.BL
 {
@@ -20,9 +21,14 @@ namespace OrderManagement.BL
         public string Description { get; set; }
         private string _ProductName;
 
+
         public string ProductName
         {
-            get { return _ProductName; }
+            get 
+            {
+                return StringHandling.InsertSpace(_ProductName); 
+            }
+
             set { _ProductName = value; }
         }
 

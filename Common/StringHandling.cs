@@ -4,9 +4,9 @@ using System.Text.RegularExpressions;
 
 namespace Common
 {
-    public class StringHandling
+    public static class StringHandling
     {
-        public string InertSpace(string source)
+        public static string InsertSpace(string source)
         {
             string result = string.Empty;
                        

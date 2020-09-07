@@ -13,9 +13,7 @@ namespace CommonTest
             var source = "KlockiLego";
             var expected = "Klocki Lego";
 
-            var stringHandling = new StringHandling();
-
-            var actual = stringHandling.InertSpace(source);
+            var actual = StringHandling.InsertSpace(source);
 
             Assert.AreEqual(expected, actual);
         }
@@ -27,9 +25,7 @@ namespace CommonTest
             var source = "Klocki Lego";
             var expected = "Klocki Lego";
 
-            var stringHandling = new StringHandling();
-
-            var actual = stringHandling.InertSpace(source);
+            var actual = StringHandling.InsertSpace(source);
 
             Assert.AreEqual(expected, actual);
         }
@@ -39,9 +35,7 @@ namespace CommonTest
         public void InsertSpaceTestWithSourceIsEmptyString()
         {
             var source = "";
-            var stringHandling = new StringHandling();
-
-            var actual = stringHandling.InertSpace(source);
+            var actual = StringHandling.InsertSpace(source);
 
         }
 
@@ -49,11 +43,9 @@ namespace CommonTest
         [ExpectedException(typeof(ArgumentNullException))]
         public void InsertSpaceTestWithNullValue()
         {
-                      
-            var stringHandling = new StringHandling();
 
-            var actual = stringHandling.InertSpace(null);
-           
+            var actual = StringHandling.InsertSpace(null);
+
         }
 
        
@@ -64,9 +56,7 @@ namespace CommonTest
             var source = "KLOCKILEGO";
             var expected = "KLOCKILEGO";
 
-            var stringHandling = new StringHandling();
-
-            var actual = stringHandling.InertSpace(source);
+            var actual = StringHandling.InsertSpace(source);
 
             //Assert.AreEqual(expected, actual);
         }
