@@ -3,7 +3,7 @@ using System;
 
 namespace OrderManagement.BL
 {
-    public class Product : BaseClass
+    public class Product : BaseClass, ILogin
     {
         public Product()
         {
@@ -51,6 +51,16 @@ namespace OrderManagement.BL
         public override string ToString()
         {
             return ProductName;
+        }
+
+        public string Log()
+        {
+            var logText = ProductId + ": " +
+                          ProductName + " " +
+                          "Opis: " + Description + " " +
+                          "Status :" + ObjectStatus.ToString();
+
+            return logText;
         }
 
     }

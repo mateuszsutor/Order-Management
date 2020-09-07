@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 
 namespace OrderManagement.BL
 {
-    public class Order : BaseClass
+    public class Order : BaseClass, ILogin
     {
         public Order()
         {
@@ -44,5 +45,13 @@ namespace OrderManagement.BL
             return OrderDate.Value.DateTime + "( id: " + OrderId + ")";
         }
 
+        public string Log()
+        {
+            var logText = OrderId + ": " +
+                          "Data: " + OrderDate.Value.Date + " " +
+                          "Status :" + ObjectStatus.ToString();
+
+            return logText;
+        }
     }
 }

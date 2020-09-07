@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginServiceTest.cs" />
     <Compile Include="StringHandlingTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,6 +60,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{85a13a69-ed54-4dd6-99de-619e28976ef2}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrderManagement.BL\OrderManagement.BL.csproj">
+      <Project>{845F9355-246D-4B17-9A96-CA944C0257E1}</Project>
+      <Name>OrderManagement.BL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

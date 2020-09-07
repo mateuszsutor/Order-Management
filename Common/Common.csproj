@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ILogin.cs" />
+    <Compile Include="LoginService.cs" />
     <Compile Include="StringHandling.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

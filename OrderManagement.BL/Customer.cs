@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Common;
+using System.Collections.Generic;
 
 namespace OrderManagement.BL
 {
-    public class Customer : BaseClass
+    public class Customer : BaseClass, ILogin
     {
         public Customer() 
         {
@@ -72,6 +73,16 @@ namespace OrderManagement.BL
         public override string ToString()
         {
             return FirstNameAndLastName;
+        }
+
+        public string Log()
+        { 
+            var logText = CustomerId + ": " +
+                          FirstNameAndLastName + " " +
+                          "Email: " + EmailAddress + " " +
+                          "Status :" + ObjectStatus.ToString();
+
+            return logText;
         }
     }
 }
